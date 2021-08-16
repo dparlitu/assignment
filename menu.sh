@@ -5,7 +5,7 @@
 # open passwordCheck script to check for password
 ./passwordCheck.sh
 
-# if exit status from the password check script returns 0 then display a menu with four options
+# if exit status from the password check script returns 0 then display the menu
 if [ $? = 0 ]; then
     echo
     echo -e "\033[1m \033[34m  === Main Menu ===\e[0m"
