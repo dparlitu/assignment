@@ -12,7 +12,7 @@ if [ $? = 0 ]; then
     
     export PS3=$'\033[33mPlease choose an option or press Enter to see the Menu:\e[0m '
 
-    options=("Download Botnet C2 IP Blocklist" "View Botnet C2 IP Blocklist" "Download Malware URL List" "View Malware URL List" "View Linear Regression Graph" "View IP Info" "Quit")
+    options=("Download Botnet C2 IP Blocklist" "View Botnet C2 IP Blocklist" "Download Malware URL List" "View Malware URL List" "View Linear Regression Graph" "View IP Info" "Change Password" "Quit")
     select opt in "${options[@]}"
     do
         case $opt in
@@ -34,6 +34,9 @@ if [ $? = 0 ]; then
             "View IP Info")
                 ./viewIPinfo.sh
                 ;;
+            "Change Password")
+                ./changePassword.sh
+                ;;
             "Quit")
                 echo
                 echo "Goodbye!"
@@ -44,5 +47,3 @@ if [ $? = 0 ]; then
         esac
     done
 fi
-
-# REFERENCES
