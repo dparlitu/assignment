@@ -1,0 +1,10 @@
+IP:9.9.9.9
+Hostname:dns9.quad9.net
+Anycast:true
+City:Ashburn
+Region:Virginia
+Country:US
+Loc:39.0437-77.4875
+Org:AS19281 Quad9
+Postal:20149
+Timezone:America/New_York
