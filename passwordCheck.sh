@@ -17,23 +17,23 @@ len="${#1}"
                                     if test $? -eq 0 ; then
                                         echo "Strong password"
                                     else
-                                        echo -e "\033[35mWeak password include special characters\e[0m"
+                                        echo -e "\033[35mWeak password. Please include a special character.\e[0m"
                                         return 1
                                     fi
                             else
-                                echo -e "\033[35mWeak password include Lower case character\e[0m"
+                                echo -e "\033[35mWeak password. Please include Lower case character.\e[0m"
                                 return 1
                             fi
                     else
-                        echo -e "\033[35mWeak password include Capital character\e[0m"
+                        echo -e "\033[35mWeak password. Please include Uppercase letter.\e[0m"
                         return 1
                     fi
             else
-                echo -e "\033[35mPlease include at least a number in your password\e[0m"
+                echo -e "\033[35mWeak password. Please include a number.\e[0m"
                 return 1
             fi
     else
-        echo -e "\033[35mPassword length should be greater than or equal 8 hence weak password\e[0m"
+        echo -e "\033[35mPassword should be greater than or equal to 8 in lenght\e[0m"
         return 1
     fi
 }
