@@ -68,6 +68,5 @@ else
     echo
     echo -e "\033[31mPassword doesn't match! Password NOT changed!\e[0m"
     echo
-red
     exit 1
 fi
