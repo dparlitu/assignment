@@ -59,18 +59,18 @@ else
         if checkPassword $newpassword; then
 
             # save password to file
-            echo $password > password
+            echo $newpassword > password
             # create hash for password file
             sha256sum password > secret
             # clear stored password for security purposes
             echo "" > password
             echo
-            echo -e "\033[32mPassword succesfully changed!\e[0m"
+            echo -e "\033[32mPassword succesfully created!\e[0m"
             echo
             exit 0
         else
             echo
-            echo -e "\033[31mPassword NOT changed!\e[0m"
+            echo -e "\033[31mPassword NOT set!\e[0m"
             echo
             exit 1
         fi
@@ -78,7 +78,6 @@ else
         echo
         echo -e "\033[31mPassword doesn't match! Password NOT changed!\e[0m"
         echo
-    red
         exit 1
     fi
 fi
