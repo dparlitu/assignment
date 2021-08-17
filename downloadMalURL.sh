@@ -9,6 +9,7 @@ url=https://urlhaus.abuse.ch/downloads/csv_recent/
 
 echo "Downloading file..."
 
+# download in quiet mode
 wget -q $url -O $file
 
 wgetval=$?
@@ -28,4 +29,3 @@ else
     exit 1
 fi
 
-#./menu.sh
