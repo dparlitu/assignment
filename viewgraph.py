@@ -45,4 +45,3 @@ plt.plot(xd, yerrLower, '--r')
 plt.plot(xd, yerrUpper, '--r')
 plt.show()
 
-# https://stackoverflow.com/questions/22239691/code-for-best-fit-straight-line-of-a-scatter-plot-in-python
