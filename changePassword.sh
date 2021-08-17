@@ -50,7 +50,6 @@ if [ $newpassword == $newpassword2 ]; then
 
         # save password to file
         echo $password > password
-
         # create hash for password file
         sha256sum password > secret
         # clear stored password for security purposes
@@ -65,13 +64,10 @@ if [ $newpassword == $newpassword2 ]; then
         echo
         exit 1
     fi
-
 else
-
     echo
     echo -e "\033[31mPassword doesn't match! Password NOT changed!\e[0m"
     echo
 red
     exit 1
-
 fi
