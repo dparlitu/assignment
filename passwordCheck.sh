@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# this script will check existing password or create a new one if no hash file exists
+
 # This function will check the password complexity
 checkPassword()
 {
