@@ -32,7 +32,7 @@ plt.text(.9*max(xd)+.1*min(xd),.9*max(yd)+.1*min(yd),'$R^2 = %0.2f$'% Rsqr, font
 plt.xlabel("DAYS OF PAST MONTH")
 plt.ylabel("NEW DISCOVERED MALWARE WEBSITES")
 
-# error bounds
+# error bounds, not necessary but nice to have
 yerr = [abs(slope*xx + intercept - yy)  for xx,yy in zip(xd,yd)]
 par = np.polyfit(xd, yerr, 2, full=True)
 
