@@ -33,9 +33,3 @@ print(p)
 print()
 
 subprocess.call(['sh', './viewMalUrl.sh'])
-
-
-
-
-# https://realpython.com/python-web-scraping-practical-introduction/
-# https://stackoverflow.com/questions/3777301/how-to-call-a-shell-script-from-python-code

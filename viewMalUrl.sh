@@ -9,10 +9,7 @@ if [ ! -f "./downloads/malwareurl.txt" ]; then
     exit 1
 fi
 
-
-
-
-
+# format data to display
 awk -F',' 'BEGIN {  
                     print"|======================|=========================|=========|=========|"
                     print"| FIRST SEEN           | DESTINATION IP:PORT     | STATUS  | MALWARE |"
@@ -24,10 +21,3 @@ echo "| Report Generated : $now"
 echo "|====================================================================|"
 
 echo
-
-# call the main menu as the user won't see the options due to the lenght of the report
-#./menu.sh
-
-
-# https://unix.stackexchange.com/questions/283407/can-sed-save-its-output-to-a-file
-# https://stackoverflow.com/questions/7657647/combining-two-sed-commands
