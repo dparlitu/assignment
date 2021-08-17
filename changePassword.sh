@@ -5,35 +5,35 @@
 # This function will check the password complexity
 checkPassword()
 {
-len="${#REPLY}"
+len="${#1}"
     if test $len -ge 8 ; then
-        echo "$REPLY" | grep -q [0-9]
+        echo "$1" | grep -q [0-9]
             if test $? -eq 0 ; then
-                echo "$REPLY" | grep -q [A-Z]
+                echo "$1" | grep -q [A-Z]
                     if test $? -eq 0 ; then
-                        echo "$REPLY" | grep -q [a-z]
+                        echo "$1" | grep -q [a-z]
                             if test $? -eq 0 ; then
-                                echo "$REPLY" | grep -q [!,$,@,'#',%,*,+,-]
+                                echo "$1" | grep -q [!,$,@,'#',%,*,+,-]
                                     if test $? -eq 0 ; then
                                         echo "Strong password"
                                     else
-                                        echo "Weak password include special characters"
+                                        echo -e "\033[35mWeak password include special characters\e[0m"
                                         return 1
                                     fi
                             else
-                                echo "Weak password include Lower case character"
+                                echo -e "\033[35mWeak password include Lower case character\e[0m"
                                 return 1
                             fi
                     else
-                        echo "Weak password include Capital character"
+                        echo -e "\033[35mWeak password include Capital character\e[0m"
                         return 1
                     fi
             else
-                echo "Please include at least a number in your password"
+                echo -e "\033[35mPlease include at least a number in your password\e[0m"
                 return 1
             fi
     else
-        echo "Password length should be greater than or equal 8 hence weak password"
+        echo -e "\033[35mPassword length should be greater than or equal 8 hence weak password\e[0m"
         return 1
     fi
 }
@@ -49,7 +49,7 @@ if [ $newpassword == $newpassword2 ]; then
     if checkPassword $newpassword; then
 
         # save password to file
-        echo $password > password
+        echo $newpassword > password
         # create hash for password file
         sha256sum password > secret
         # clear stored password for security purposes
