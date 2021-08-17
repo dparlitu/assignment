@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# display date/ time to show the report was ...
+# display time
 now=$(date +"%T")
 
 # check if data has been downloaded first
