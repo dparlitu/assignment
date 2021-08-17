@@ -78,7 +78,7 @@ else
         fi
     else
         echo
-        echo -e "\033[31mPassword doesn't match! Password NOT changed!\e[0m"
+        echo -e "\033[31mPassword doesn't match! Password NOT created!\e[0m"
         echo
         exit 1
     fi
