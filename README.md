@@ -5,7 +5,7 @@ This Software Based Solution consists of a Main menu with multiple choices. Each
 
 Application can be started by running the menu.sh script file.
 
-When the application is first started user will have to create a password with requirements as per below:
+When the application is first started, the user will have to create a password with requirements as per below:
 - length has to be higher than 8 characters
 - contain a number between 0 and 9
 - requirement of an uppercase letter
